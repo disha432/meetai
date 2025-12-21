@@ -124,13 +124,26 @@ export const SignInView = () => {
                                     </span>
                                 </div>
                                 <div className="grid grid-cols-2 gap-4">
-                                    <Button variant={"outline"}
+                                    <Button 
+                                    onClick={() => {
+                                        authClient.signIn.social({
+                                            provider : "google",
+                                        })
+
+                                    }}
+                                    variant={"outline"}
                                         type="button"
                                         className="w-full"
                                         disabled={pending}>
                                         Google
                                     </Button>
-                                    <Button variant={"outline"}
+                                    <Button onClick={() => {
+                                        authClient.signIn.social({
+                                            provider : "github",
+                                        })
+
+                                    }}
+                                    variant={"outline"}
                                         type="button"
                                         className="w-full"
                                         disabled={pending}>
