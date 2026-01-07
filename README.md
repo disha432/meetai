@@ -2,7 +2,7 @@
   <img src="public/logo.svg" alt="MeetAI Logo" width="120" />
 </p>
 
-<h1 align="center">🤖 MeetAI</h1>
+<h1 align="center"> MeetAI</h1>
 
 <p align="center">
   AI-Powered Meeting Assistant
