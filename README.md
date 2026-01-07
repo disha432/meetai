@@ -1,42 +1,4 @@
-sequenceDiagram
-    actor User
-    participant Page as Next.js Page<br/>[meetingId]
-    participant TRPC as TRPC Client
-    participant DB as Database
-    participant StreamSvc as Stream.io Service
-    participant StreamSDK as Stream Video SDK<br/>(Client)
-
-    User->>Page: Navigate to /call/[meetingId]
-    Page->>Page: Verify session (redirect if needed)
-    Page->>TRPC: Prefetch meetings.getOne
-    TRPC->>DB: Fetch meeting + metadata
-    DB-->>TRPC: Meeting data
-    TRPC-->>Page: Dehydrated query state
-    Page->>User: Render CallView + HydrationBoundary
-
-    rect rgb(240, 248, 255)
-    Note over User,StreamSDK: User joins call flow
-    User->>StreamSDK: CallProvider rendered with session
-    StreamSDK->>StreamSDK: Read user session + generate avatar
-    User->>StreamSDK: Enter lobby (CallUI in "lobby" mode)
-    User->>StreamSDK: Grant permissions + click Join Call
-    StreamSDK->>TRPC: generateToken (for current user)
-    TRPC->>StreamSvc: Upsert user + create room (if first time)
-    StreamSvc-->>TRPC: User token + metadata
-    TRPC-->>StreamSDK: Token returned
-    StreamSDK->>StreamSDK: Initialize StreamClient with token
-    StreamSDK->>StreamSvc: Join call
-    StreamSvc-->>StreamSDK: Call active (SpeakerLayout ready)
-    StreamSDK->>User: Render CallUI in "call" mode (CallActive)
-    end
-
-    rect rgb(255, 240, 245)
-    Note over User,StreamSDK: User ends call
-    User->>StreamSDK: Click leave/disconnect
-    StreamSDK->>StreamSvc: End call + cleanup
-    StreamSDK->>StreamSDK: Switch to "ended" mode
-    StreamSDK->>User: Render CallEnded (redirect option)
-    end
+<img width="1086" height="743" alt="image" src="https://github.com/user-attachments/assets/96b51bc8-c31a-44aa-abd7-13d002ca27bc" />
 
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
