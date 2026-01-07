@@ -1,9 +1,22 @@
-MeetAI — AI-Powered Meeting Assistant
+<p align="center">
+  <img src="public/logo.png" alt="MeetAI Logo" width="120" />
+</p>
+
+<h1 align="center">🤖 MeetAI</h1>
+
+<p align="center">
+  AI-Powered Meeting Assistant
+</p>
+
+
+🤖 MeetAI is a real-time AI meeting assistant that joins video calls, listens to conversations, and generates structured summaries, transcripts, and insights after the meeting.
+
+Built with Next.js, tRPC, Stream Video, OpenAI, and Inngest, this project focuses on real-time systems, background workflows, and AI orchestration.
+
 
 <img width="1086" height="743" alt="image" src="https://github.com/user-attachments/assets/96b51bc8-c31a-44aa-abd7-13d002ca27bc" />
 
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
 
