@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="public/logo.png" alt="MeetAI Logo" width="120" />
+  <img src="public/logo.svg" alt="MeetAI Logo" width="120" />
 </p>
 
 <h1 align="center">🤖 MeetAI</h1>
