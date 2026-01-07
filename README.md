@@ -1,3 +1,5 @@
+MeetAI — AI-Powered Meeting Assistant
+
 <img width="1086" height="743" alt="image" src="https://github.com/user-attachments/assets/96b51bc8-c31a-44aa-abd7-13d002ca27bc" />
 
 
